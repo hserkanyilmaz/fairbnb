@@ -5,7 +5,7 @@ export interface Rental {
   street: string;
   category: string;
   image: string;
-  bedrooms: string;
+  bedrooms: number;
   description: string;
   dailyRate: number;
   shared: boolean;

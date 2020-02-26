@@ -1,10 +1,40 @@
-<dir *ngIf="rental">
-  <p>{{rental.id}}</p>
-  <p>{{rental.title}}</p>
-  <p>{{rental.city}}</p>
-  <p>{{rental.street}}</p>
-  <p>{{rental.category}}</p>
-  <p>{{rental.description}}</p>
-  <p>{{rental.dailyRate}}</p>
-</dir>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 text-left">
+      <h2>{{ rental.title }}</h2>
+    </div>
+    <div class="col-12 col-sm-6 text-right">
+      <h5>{{ rental.street }} / {{ rental.city }}</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-5">
+      <img [src]="rental.image" class="full-size" alt="{{ rental.title }}">
+      <img [src]="rental.image" class="full-size" alt="{{ rental.title }}">
+      <img [src]="rental.image" class="full-size" alt="{{ rental.title }}">
+    </div>
+    <div class="col-sm-7">
+      <p>{{ rental.description }}</p>
+    
+      <h3>Details</h3>
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <ul>
+            <li><strong>Created At:</strong> {{ rental.createdAt }}</li>
+            <li><strong>Category:</strong> {{ rental.category | titlecase }}</li>
+            <li><strong>Daily Rate:</strong> {{ rental.createdAt }}</li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li><strong>Bedrooms:</strong> {{ rental.bedrooms }}</li>
+            <li><strong>Shared:</strong> {{ rental.shared ? 'Yes' : 'No' }}</li>
+          </ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
